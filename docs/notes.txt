@@ -1,0 +1,56 @@
+P = 1 - (1-Xhcc)Ihc (1-Xhac)Iha (1-Xkcc)Ikc (1-Xkac)Ika (1-Xs)Is (1-Xn)In (1-Xm)Im
+
+Ihc household chile
+Iha household adult
+Ikc household cluster child
+Ika household cluster adult
+Is school
+In neighborhood
+Im community
+
+Xhcc household child to child
+Xhac
+Xkcc
+Xkac
+Xs
+Xn
+Xm
+
+cc .352
+ac .03
+aa .01
+work .01
+prek .03
+daycare .02
+elem .01
+mid .008
+high .005
+pw .0001
+ww .002
+pv .0001
+wv .002
+mc .03
+ma .01
+
+None
+prek
+elem
+mid
+high
+work
+none
+
+hospital staff: 70/5000
+
+first 72hr after contm -> contagious
+fever -> contagious 7-14 days
+
+Status:
+Not Exposed
+Contaminated
+Infected
+Fever
+Rash
+Papules
+Vesicles
+Dead
