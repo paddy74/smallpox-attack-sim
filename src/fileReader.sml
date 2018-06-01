@@ -1,7 +1,7 @@
 (******************************************************************************
 * 		Author: Patrick Cox
 * Date Created: 02 December 2017
-* Date Updated: 23 December 2017
+* Date Updated: 01 June 2018
 * 	   Project: Smallpox Attack Sim
 *         File: fileReader.sml
 *
@@ -26,6 +26,7 @@ fun loadFile (infile : string) =
 		loop ins before TextIO.closeIn ins
 end;
 
+
 (* Parse a string into a : int list by the delimiter " "
 	returns : int list
 
@@ -37,11 +38,13 @@ fun strToIntList str =
 		List.mapPartial Int.fromString (String.tokens (fn c => c = #" ") str')
 end;
 
+
 (* Apply strToIntList on each element of a : string list
 	uses strToIntList 
-	returns : int list list *)
-fun strListToIntListList (stringList : string list) =
+	return : int list list *)
+fun strListToIntListList(stringList : string list) =
 	map(fn str => strToIntList str) stringList;
+
 
 (* THE FOLLOWING IS NOT USED *)
 (* Trim last n characters of a string
