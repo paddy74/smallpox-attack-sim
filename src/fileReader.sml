@@ -30,10 +30,12 @@ end;
 (* Parse a string into a : int list by the delimiter " "
 	returns : int list
 
-	As found at https://stackoverflow.com/questions/14750444/how-can-i-parse-string-to-int-int-tuple-in-sml/35730421 *)
+	As found at https://stackoverflow.com/questions/14750444/how-can-i-parse-string-to-int-int-tuple-in-sml/35730421
+	Note that mapPartial discards anything that can't be converted to an integer (when Int.fromString return None.
+	     and that it is assumed the string always contains \n as the last two characters are removed by taking the substring. *)
 fun strToIntList str =
 	let
-		val str' = String.substring(str, 0, size str-2)
+		val str' = String.substring(str, 0, size str-1)
 	in
 		List.mapPartial Int.fromString (String.tokens (fn c => c = #" ") str')
 end;
@@ -48,8 +50,8 @@ fun strListToIntListList(stringList : string list) =
 
 (* THE FOLLOWING IS NOT USED *)
 (* Trim last n characters of a string
-	returns : string
-fun trimString (str : string, n_chars : int) =
+	returns : string *)
+(* fun trimString (str : string, n_chars : int) =
 	String.substring(str, 0, size str - n_chars);
 
    Apply trimString on each element of a : string list
