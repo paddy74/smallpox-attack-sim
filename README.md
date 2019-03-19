@@ -1,3 +1,5 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
+
 # SMLNJ Smallpox Attack Simulator
 Simulates a disease outbreak using [Standard ML of New Jersey](https://www.smlnj.org/).
 
